@@ -11,9 +11,8 @@
  */
 int _printf(const char *format, ...)
 {
-  int i, j, k = 0;
+	int i, j, k = 0;
 	char *set = "cs";
-	char *s;
 	va_list arguments;
 	int (*ptr2func[opt]) (va_list arguments) = {print_char, print_string};
 
@@ -22,20 +21,20 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
-	s = va_arg(arguments, char*);
-	for (i = 0 ; s[i] != '\0' ; i++)
+	for (i = 0 ; format[i] != '\0' ; i++)
 	{
-		if (s[i] == '%')
+		if (format[i] == '%')
 		{
 			for (j = 0 ; j < opt ; j++)
 			{
-				if (s[i + 1] == set[j])
+				if (format[i + 1] == set[j])
 				{
-				  k = ptr2func[j] (arguments);
+					k = ptr2func[j](arguments);
+					i = i + 2;
 				}
 			}
 		}
-		_putchar(s[i]);
+		_putchar(format[i]);
 	}
 	_putchar('\0');
 	va_end(arguments);
