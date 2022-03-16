@@ -44,11 +44,11 @@ int print_string(va_list argument)
  * @arguments: the character percentage to print
  * Return: int, the number of characters printed with function
  */
-int print_perc (va_list arguments)
+int print_perc(va_list argument)
 {
-	char c;
+	char per;
 
-	c = '%';
-	_putchar(c);
+	per = '%';
+	_putchar(per);
 	return (1);
 }
