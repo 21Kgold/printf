@@ -6,7 +6,7 @@
  * _printf - produces output according to a format
  * @format: is a character string, composed of zero or more directives
  * Description: need to handle conversion specifiers c, s and %
- * Return: the number of characters printed, excluding the null byte used to
+ * Return: the total number of characters printed, excluding the null byte used to
  * end output to strings.
  */
 int _printf(const char *format, ...)
@@ -29,16 +29,16 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == set[j])
 				{
-				  k += ptr2func[j](arguments);
+					k += ptr2func[j](arguments);
 					i = i + 1;
 				}
 			}
 		}
 		else
-		  {
-		    _putchar(format[i]);
-		    k++;
-		  }
+		{
+			_putchar(format[i]);
+			k++;
+		}
 	}
 	va_end(arguments);
 	return (k);
