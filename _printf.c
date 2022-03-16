@@ -12,7 +12,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, j, k = 0;
+	int i, j, k, l = 0;
 	char *set = "cs%";
 	va_list argument;
 
@@ -21,27 +21,27 @@ int _printf(const char *format, ...)
 	};
 	va_start(argument, format);
 	if (format == NULL)
+	{
 		return (-1);
+	}
 	for (i = 0 ; format[i] != '\0' ; i++)
 	{
 		if (format[i] == '%')
 		{
+			l = 0;
 			if (format[i + 1] == '\0')
-			{
-			return (-1);
-			}
+				return (-1);
 			for (j = 0 ; j < opt ; j++)
 			{
 				if (format[i + 1] == set[j])
 				{
 					k += ptr2func[j](argument);
 					i = i + 1;
-				}
-				else
-				{
-				_putchar(format[i]);
+					l = 1;
 				}
 			}
+			if (l == 0)
+				_putchar(format[i]);
 		}
 		else
 		{
