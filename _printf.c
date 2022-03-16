@@ -36,7 +36,6 @@ int _printf(const char *format, ...)
 		}
 		_putchar(format[i]);
 	}
-	_putchar('\0');
 	va_end(arguments);
 	return (i + k);
 }
