@@ -15,8 +15,10 @@ int _printf(const char *format, ...)
 	int i, j, k = 0;
 	char *set = "cs%";
 	va_list argument;
-	int (*ptr2func[opt]) (va_list argument) = {print_char, print_string, print_perc};
 
+	int (*ptr2func[opt]) (va_list argument) = {
+	print_char, print_string, print_perc
+	};
 	va_start(argument, format);
 	if (format == NULL)
 	{
