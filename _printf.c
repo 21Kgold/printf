@@ -36,6 +36,7 @@ int _printf(const char *format, ...)
 				{
 					k += ptr2func[j](argument);
 					i = i + 1;
+					break;
 				}
 			}
 		}
