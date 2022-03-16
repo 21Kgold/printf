@@ -12,7 +12,7 @@
 int _printf(const char *format, ...)
 {
 	int i, j, k = 0;
-	char *set = "cs%";
+	char *set = "csd";
 	va_list arguments;
 	int (*ptr2func[opt]) (va_list arguments) = {print_char, print_string, print_perc};
 
