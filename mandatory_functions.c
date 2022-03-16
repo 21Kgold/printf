@@ -47,6 +47,7 @@ int print_string(va_list argument)
 int print_perc(va_list argument)
 {
 	char per;
+	(void)argument;
 
 	per = '%';
 	_putchar(per);
