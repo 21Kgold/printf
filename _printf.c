@@ -25,6 +25,10 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+			{
+			return (-1);
+			}
 			for (j = 0 ; j < opt ; j++)
 			{
 				if (format[i + 1] == set[j])
