@@ -20,10 +20,8 @@ int _printf(const char *format, ...)
 	print_char, print_string, print_perc
 	};
 	va_start(argument, format);
-	if (format == NULL)
-	{
+	if (format == NULL || format[0] == '\0')
 		return (-1);
-	}
 	for (i = 0 ; format[i] != '\0' ; i++)
 	{
 		if (format[i] == '%')
@@ -38,6 +36,10 @@ int _printf(const char *format, ...)
 				{
 					k += ptr2func[j](argument);
 					i = i + 1;
+				}
+				else
+				{
+				_putchar(format[i]);
 				}
 			}
 		}
