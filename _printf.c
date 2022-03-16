@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 	print_char, print_string, print_perc
 	};
 	va_start(argument, format);
-	if (format == NULL || format[0] == '\0')
+	if (format == NULL)
 		return (-1);
 	for (i = 0 ; format[i] != '\0' ; i++)
 	{
