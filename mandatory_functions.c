@@ -3,7 +3,7 @@
 #include "main.h"
 /**
  * print_char - print data type char
- * @arguments: arguments
+ * @argument: arguments
  * Return: the number of characters printed, excluding the null byte used to
  * end output to strings.
  */
@@ -18,7 +18,7 @@ int print_char(va_list argument)
 
 /**
  * print_string - print data type string
- * @arguments: arguments
+ * @argument: arguments
  * Return: the number of characters printed, excluding the null byte used to
  * end output to strings.
  */
@@ -41,7 +41,7 @@ int print_string(va_list argument)
 }
 /**
  * print_perc - Prints percentage
- * @arguments: the character percentage to print
+ * @argument: the character percentage to print
  * Return: int, the number of characters printed with function
  */
 int print_perc(va_list argument)
