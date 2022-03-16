@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "main.h"
-#define opt 2
+#define opt 3
 /**
  * _printf - produces output according to a format
  * @format: is a character string, composed of zero or more directives
@@ -12,9 +12,9 @@
 int _printf(const char *format, ...)
 {
 	int i, j, k = 0;
-	char *set = "cs";
+	char *set = "cs%";
 	va_list arguments;
-	int (*ptr2func[opt]) (va_list arguments) = {print_char, print_string};
+	int (*ptr2func[opt]) (va_list arguments) = {print_char, print_string, print_perc};
 
 	va_start(arguments, format);
 	if (format == NULL)

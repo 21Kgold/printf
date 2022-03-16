@@ -5,4 +5,5 @@ int _printf(const char *format, ...);
 int print_char(va_list argument);
 int print_string(va_list argument);
 int print_number(va_list argument);
+int print_perc(va_list argument);
 #endif
