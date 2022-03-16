@@ -13,10 +13,10 @@ int _printf(const char *format, ...)
 {
 	int i, j, k = 0;
 	char *set = "cs%";
-	va_list arguments;
-	int (*ptr2func[opt]) (va_list arguments) = {print_char, print_string, print_perc};
+	va_list argument;
+	int (*ptr2func[opt]) (va_list argument) = {print_char, print_string, print_perc};
 
-	va_start(arguments, format);
+	va_start(argument, format);
 	if (format == NULL)
 	{
 		return (-1);
@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == set[j])
 				{
-					k += ptr2func[j](arguments);
+					k += ptr2func[j](argument);
 					i = i + 1;
 				}
 			}
@@ -40,6 +40,6 @@ int _printf(const char *format, ...)
 			k++;
 		}
 	}
-	va_end(arguments);
+	va_end(argument);
 	return (k);
 }

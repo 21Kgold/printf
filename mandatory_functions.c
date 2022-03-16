@@ -31,7 +31,7 @@ int print_string(va_list argument)
 
 	if (s == NULL)
 	{
-		s = "(NIL)";
+		s = "(null)";
 	}
 	for (i = 0; s[i] != '\0' ; i++)
 	{
