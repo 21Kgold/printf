@@ -12,7 +12,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, j, k, l = 0;
+	int i, j, k;
 	char *set = "cs%";
 	va_list argument;
 
@@ -28,7 +28,6 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			l = 0;
 			if (format[i + 1] == '\0')
 				return (-1);
 			for (j = 0 ; j < opt ; j++)
@@ -37,11 +36,8 @@ int _printf(const char *format, ...)
 				{
 					k += ptr2func[j](argument);
 					i = i + 1;
-					l = 1;
 				}
 			}
-			if (l == 0)
-				_putchar(format[i]);
 		}
 		else
 		{
