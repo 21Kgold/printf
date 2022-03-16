@@ -1,4 +1,4 @@
-#include <stdio.h>
+qq#include <stdio.h>
 #include <stdarg.h>
 #include "main.h"
 #define opt 2
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 				if (format[i + 1] == set[j])
 				{
 				  k += ptr2func[j](arguments);
-					i = i + 2;
+					i = i + 1;
 				}
 			}
 		}
