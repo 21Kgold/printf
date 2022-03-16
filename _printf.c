@@ -1,4 +1,4 @@
-qq#include <stdio.h>
+#include <stdio.h>
 #include <stdarg.h>
 #include "main.h"
 #define opt 2
