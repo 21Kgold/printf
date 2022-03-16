@@ -29,13 +29,17 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == set[j])
 				{
-					k = ptr2func[j](arguments);
+				  k += ptr2func[j](arguments);
 					i = i + 2;
 				}
 			}
 		}
-		_putchar(format[i]);
+		else
+		  {
+		    _putchar(format[i]);
+		    k++;
+		  }
 	}
 	va_end(arguments);
-	return (i + k);
+	return (k);
 }
