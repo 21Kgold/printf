@@ -12,7 +12,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, j, k;
+	int i, j, k = 0;
 	char *set = "cs%";
 	va_list argument;
 
