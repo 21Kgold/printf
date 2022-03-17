@@ -2,12 +2,12 @@
 #include <stdarg.h>
 #include "main.h"
 /**
- * print_char - print data type char
+ * c - print data type char
  * @argument: arguments
  * Return: the number of characters printed, excluding the null byte used to
  * end output to strings.
  */
-int print_char(va_list argument)
+int c(va_list argument)
 {
 	char c;
 
@@ -17,12 +17,12 @@ int print_char(va_list argument)
 }
 
 /**
- * print_string - print data type string
+ * s - print data type string
  * @argument: arguments
  * Return: the number of characters printed, excluding the null byte used to
  * end output to strings.
  */
-int print_string(va_list argument)
+int s(va_list argument)
 {
 	char *s;
 	int i;
@@ -40,11 +40,11 @@ int print_string(va_list argument)
 	return (i);
 }
 /**
- * print_perc - Prints percentage
+ * pc - Prints percentage
  * @argument: the character percentage to print
  * Return: int, the number of characters printed with function
  */
-int print_perc(va_list argument)
+int pc(va_list argument)
 {
 	char per;
 	(void)argument;
