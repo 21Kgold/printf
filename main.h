@@ -2,8 +2,8 @@
 #define MAIN_H
 int _putchar(char c);
 int _printf(const char *format, ...);
-int c(va_list argument);
-int s(va_list argument);
-int n(va_list argument);
-int pc(va_list argument);
+int pcc(va_list argument);
+int pcs(va_list argument);
+int pcd(va_list argument);
+int pcpc(va_list argument);
 #endif

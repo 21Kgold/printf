@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	va_list argument;
 
 	int (*ptr2func[opt]) (va_list argument) = {
-	c, s, pc
+	pcc, pcs, pcpc
 	};
 	va_start(argument, format);
 	if (format == NULL)
