@@ -41,5 +41,5 @@ int pcb(va_list argument)
 		_putchar(s[i]);
 	}
 	free(s);
-	return (j);
+	return (j - 2);
 }
