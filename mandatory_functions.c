@@ -62,7 +62,8 @@ int pcpc(va_list argument)
 int pcd(va_list argument)
 {
 	int number = va_arg(argument, int);
-	int i, k, number1, dec, dig;
+	int i, k;
+	unsigned int number1, dec, dig;
 
 	number1 = 0;
 	dec = 1;
