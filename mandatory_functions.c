@@ -55,7 +55,7 @@ int pcpc(va_list argument)
 }
 /**
  * pcd - print data type number
- * @argument: arguments
+ * @argument: arguments to print
  * Return: the number of characters printed, excluding the null byte used to
  * end output to strings.
  */
