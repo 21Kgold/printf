@@ -68,8 +68,9 @@ int pcd(va_list argument)
 	dec = 1;
 	dig = 0;
 	k = 0;
-	if (number == 0)
+	if (number == 0 || number == -0)
 	{
+		_putchar('0');
 		return (0);
 	}
 	if (number < 0)
