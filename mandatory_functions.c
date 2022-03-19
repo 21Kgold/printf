@@ -71,7 +71,7 @@ int pcd(va_list argument)
 	if (number == 0 || number == -0)
 	{
 		_putchar('0');
-		return (0);
+		return (1);
 	}
 	if (number < 0)
 	{
