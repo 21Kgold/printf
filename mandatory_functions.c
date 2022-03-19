@@ -53,3 +53,47 @@ int pcpc(va_list argument)
 	_putchar(per);
 	return (1);
 }
+/**
+ * pcd - print data type number
+ * @argument: arguments
+ * Return: the number of characters printed, excluding the null byte used to
+ * end output to strings.
+ */
+int pcd(va_list argument)
+{
+	int number = va_arg(argument, int);
+	int i, k, number1, dec, dig;
+
+	number1 = 0;
+	dec = 1;
+	dig = 0;
+	k = 0;
+	if (number == 0)
+	{
+		return(0);
+	}
+	if (number < 0)
+	{
+		_putchar('-');
+		number = number * -1;
+		k++;
+	}
+	number1 = number;
+	for (i = 1; number1 > 9; i++)
+	{
+		number1 = (number1 / 10);
+		dec = dec * 10;
+	}
+	number1 = number;
+	for (i = 0 ; dec > 9; i++)
+	{
+		dig = (number1 / dec);
+		_putchar(dig + '0');
+		number1 = number1 - (dig * dec);
+		dec = dec / 10;
+		k++;
+	}
+	_putchar(number1 + '0');
+	k++;
+	return(k);
+}
