@@ -70,7 +70,7 @@ int pcd(va_list argument)
 	k = 0;
 	if (number == 0)
 	{
-		return(0);
+		return (0);
 	}
 	if (number < 0)
 	{
@@ -95,5 +95,5 @@ int pcd(va_list argument)
 	}
 	_putchar(number1 + '0');
 	k++;
-	return(k);
+	return (k);
 }
