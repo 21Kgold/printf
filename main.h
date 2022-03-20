@@ -7,4 +7,6 @@ int pcs(va_list argument);
 int pcd(va_list argument);
 int pcpc(va_list argument);
 int pcb(va_list argument);
+int r13(va_list argument);
+int pre(va_list argument);
 #endif
